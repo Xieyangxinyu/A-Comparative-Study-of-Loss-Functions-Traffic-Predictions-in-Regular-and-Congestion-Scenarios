@@ -1,0 +1,6 @@
+matplotlib
+numpy
+scipy
+pandas
+torch ==1.9.0
+argparse

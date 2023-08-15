@@ -1,0 +1,6 @@
+geopandas==0.13.2
+numpy==1.23.5
+pandas==1.3.5
+ruptures==1.1.8
+scipy==1.11.1
+seaborn==0.12.2
