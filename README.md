@@ -2,16 +2,16 @@
 
 This repository reproduces the results reported in [A Comparative Study of Loss Functions: Traffic Predictions in Regular and Congestion Scenarios]().
 
-### Requirements
+## Requirements
 Dependency can be installed using the following command:
 ```
 pip install -r requirements.txt
 ```
 
-### Retraining all the models
+## Retraining all the models
 Under the four folders `D2STGNN`, `D2STGNN-quantile`, `Graph-WaveNet`, `Graph-WaveNet-quantile`, we provide the adapted source code for each model to reproduce the results in this paper. You can follow the instructions in the `README.md` under each of these four folders to retrain the models. After training, the best model checkpoints in training will be saved under `archive`, and the predicted traffic speed in the test set will be saved under `result`.
 
-### [Dataset](https://drive.google.com/drive/folders/13tFUPaVaQ9osSdeTxnlOSShfqAqOd6DL?usp=share_link)
+## [Dataset](https://drive.google.com/drive/folders/13tFUPaVaQ9osSdeTxnlOSShfqAqOd6DL?usp=share_link)
 Download the `METR-LA` and `PEMS-BAY` folders. Both folders contain 
  - two subfolders `GraphWaveNet` and `D2STGNN`. These two folders contain 
     - the best model checkpoints in training, under `models` folder; and
@@ -20,7 +20,7 @@ Download the `METR-LA` and `PEMS-BAY` folders. Both folders contain
  - Source data files: `METR-LA/metr-la.h5`, `METR-LA/graph_sensor_locations.csv`, `PEMS-BAY/pems-bay.h5`, `PEMS-BAY/graph_sensor_locations_bay.csv`.
  - `change_points.pkl`, `change_point_intervals.pkl` and `congested.pkl`. These can also be generated following the instructions below.
 
-### Metric Computation
+## Metric Computation
 
 To run our metric computation, we need `change_point_intervals.pkl` and `congested.pkl` for the `METR-LA` and `PEMS-BAY` datasets. 
 
