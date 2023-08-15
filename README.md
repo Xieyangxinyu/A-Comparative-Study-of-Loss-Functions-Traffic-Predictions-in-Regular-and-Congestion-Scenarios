@@ -9,7 +9,10 @@ pip install -r requirements.txt
 ```
 
 ## Retraining all the models
-Under the four folders `D2STGNN`, `D2STGNN-quantile`, `Graph-WaveNet`, `Graph-WaveNet-quantile`, we provide the adapted source code for each model to reproduce the results in this paper. You can follow the instructions in the `README.md` under each of these four folders to retrain the models. After training, the best model checkpoints in training will be saved under `archive`, and the predicted traffic speed in the test set will be saved under `result`.
+Under the four folders of the form `$MODEL(-quantile)` (`D2STGNN`, `D2STGNN-quantile`, `Graph-WaveNet`, `Graph-WaveNet-quantile`), we provide the adapted source code for each model to reproduce the results in this paper. 
+- You can follow the instructions in the `README.md` under each of these four folders to retrain the models. After training, the best model checkpoints in training will be saved under `archive`, and the predicted traffic speed in the test set will be saved under `result`.
+- Quantile loss requires a slightly different model output structure than the other loss functions. `-quantile` means that the we made changes to the code in order to adapt to the Quantile Loss implemented in [Quantifying Uncertainty in Deep Spatiotemporal Forecasting, KDD 2021] (https://dl.acm.org/doi/abs/10.1145/3447548.3467325).
+- All the other loss functions (`mae`, `mse`, `mae-focal`, `mse-focal`, `bmse1`, `bmse9`, `huber`, `kirtosis`, `Gumbel`) are implementeed under `$MODEL`. For `Graph-WaveNet`, the loss functions are implemented under `util.py`; for `D2STGNN`, the loss functions are implemented under `models/losses.py`.
 
 ## [Dataset](https://drive.google.com/drive/folders/13tFUPaVaQ9osSdeTxnlOSShfqAqOd6DL?usp=share_link)
 Download the `METR-LA` and `PEMS-BAY` folders. Both folders contain 
