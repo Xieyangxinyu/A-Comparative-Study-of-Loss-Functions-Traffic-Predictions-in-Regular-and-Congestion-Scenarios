@@ -1,6 +1,6 @@
 # A Comparative Study of Loss Functions: Traffic Predictions in Regular and Congestion Scenarios
 
-This repository reproduces the results reported in [A Comparative Study of Loss Functions: Traffic Predictions in Regular and Congestion Scenarios]().
+This repository reproduces the results reported in [A Comparative Study of Loss Functions: Traffic Predictions in Regular and Congestion Scenarios](https://arxiv.org/abs/2308.15464).
 
 ## Requirements
 Dependency can be installed using the following command:
