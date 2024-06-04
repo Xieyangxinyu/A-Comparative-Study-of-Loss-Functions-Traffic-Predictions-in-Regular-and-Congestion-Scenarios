@@ -8,6 +8,8 @@ Dependency can be installed using the following command:
 pip install -r requirements.txt
 ```
 
+If you run into issues while installing `tables`, try the following stackoverflow [solution](https://stackoverflow.com/questions/73029883/could-not-find-hdf5-installation-for-pytables-on-m1-mac).
+
 ## Retraining all the models
 Under the four folders of the form `$MODEL(-quantile)` (`D2STGNN`, `D2STGNN-quantile`, `Graph-WaveNet`, `Graph-WaveNet-quantile`), we provide the adapted source code for each model to reproduce the results in this paper. 
 - You can follow the instructions in the `README.md` under each of these four folders to retrain the models. After training, the best model checkpoints in training will be saved under `archive`, and the predicted traffic speed in the test set will be saved under `result`.
